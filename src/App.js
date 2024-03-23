@@ -1,37 +1,28 @@
 
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Comp1, Imagem, Inputa, style, Inputa2 } from './Primeiro';
+import { View, StyleSheet, Button} from 'react-native';
+import { Comp1, Imagem, InputLogin, InputSenha, BotaoRegistrar } from './PrimeiraPagina';
+import Estilo, {LoginEstilo} from './Estilo';
+
+
 
 
 export default function App() {
   return (
-    <View style={styles.App}>
+    <View style={Estilo.App}>
       <Imagem />
-      <View style={style.inputContainer}>
-        <Inputa />
+      <View style={Estilo.inputContainer}>
+        <InputLogin />
       </View>
       <View>
-        <Inputa2 />
+        <InputSenha />
+      </View>
+
+      <View>
+      <BotaoRegistrar />
+
       </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-
-
-  App: {
-
-
-    backgroundColor: 'black',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-
-
-  },
-
-
-
-});

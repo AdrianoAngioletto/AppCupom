@@ -1,6 +1,6 @@
 // Primeiro.js
 import React from "react";
-import { Image,  Text, View, TextInput, Button } from "react-native";
+import { Image,  Text, View, TextInput, Button, } from "react-native";
 import Estilo, { LoginEstilo } from "./Estilo";
 
 
@@ -9,7 +9,13 @@ function Comp1() {
 }
 
 function Imagem() {
-  return <Image source={require('../logo.png')}  style={Estilo.EstiloImg}/>;
+
+  return (
+    <View style={Estilo.CaixaLogo}>
+      <Image source={require('./imagens/logotipo.png')} style={Estilo.EstiloImg} />
+    </View>
+  );
+
 }
 
 function InputLogin() {
@@ -17,7 +23,7 @@ function InputLogin() {
     <View style={Estilo.inputContainer}>
       <LoginEstilo
         placeholder="Digite seu Email."
-        placeholderTextColor="black"
+        placeholderTextColor="white"
       />
     </View>
   );
@@ -29,8 +35,9 @@ function InputSenha() {
       <LoginEstilo
         style={Estilo.input}
         placeholder="Digte sua senha."
-        placeholderTextColor="black"
-        secureTextEntry
+        placeholderTextColor="white"
+        style={{ color: 'white' }} // Defina a cor do texto como branco
+        secureTextEntry // Adicione a propriedade secureTextEntry
 
       />
     </View>
@@ -41,9 +48,10 @@ function BotaoRegistrar(){
 
   return(
 
-    <View style={Estilo.caixa_registro}>
+    <View>
       <Button 
        title="Registrar"
+       color="black"
       
       />
 
@@ -52,9 +60,32 @@ function BotaoRegistrar(){
 
   )
 
+}
+
+function BotaoEntrar(){
+
+  return (
+    <View>
+      
+    <Button 
+    title="Entrar"
+    color="black"
+
+      
+      
+    />
+
+    </View>
+
+
+
+  )
 
 }
 
 
 
-export { Comp1, Imagem, InputLogin,  InputSenha, BotaoRegistrar };
+
+
+
+export { Comp1, Imagem, InputLogin,  InputSenha, BotaoRegistrar, BotaoEntrar };

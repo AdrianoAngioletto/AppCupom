@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { View, StyleSheet, Button} from 'react-native';
-import { Comp1, Imagem, InputLogin, InputSenha, BotaoRegistrar } from './PrimeiraPagina';
+import { View, StyleSheet, Button, ImageBackground} from 'react-native';
+import { Comp1, Imagem, InputLogin, InputSenha, BotaoRegistrar, BotaoEntrar } from './PrimeiraPagina';
 import Estilo, {LoginEstilo} from './Estilo';
 
 
@@ -9,7 +9,8 @@ import Estilo, {LoginEstilo} from './Estilo';
 
 export default function App() {
   return (
-    <View style={Estilo.App}>
+  <ImageBackground source={require('./imagens/background.jpeg')} style={Estilo.backgroundImage}>
+    <View>
       <Imagem />
       <View style={Estilo.inputContainer}>
         <InputLogin />
@@ -18,11 +19,13 @@ export default function App() {
         <InputSenha />
       </View>
 
-      <View>
-      <BotaoRegistrar />
+      <View style={Estilo.CaixaBotoes}>
+        <BotaoRegistrar />
+        <BotaoEntrar/>
 
       </View>
     </View>
+  </ImageBackground>
   );
 }
 

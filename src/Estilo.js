@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Button, StyleSheet, TouchableOpacity , Text} from "react-native";
 import styled from 'styled-components/native'
 
 export default StyleSheet.create({
@@ -11,8 +11,6 @@ export default StyleSheet.create({
 
     App: {
 
-
-        backgroundColor: 'black',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
@@ -25,24 +23,28 @@ export default StyleSheet.create({
         fontSize: 18
       },
       EstiloImg: {
+        width: 200,
         height: 200,
-        width: 130,
-        marginBottom: 50
+        marginLeft: 20
+     
       },
       inputContainer: {
-        marginTop: 6,
-        borderRadius: 3,
-        backgroundColor: 'white',
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 3,
+        borderRadius: 2,
+        backgroundColor: 'black',
         textAlign: 'center'
        
 
       },
       input: {
-        height: 35,
-        width: 250,
+        width: '100%',
         color: 'black',
         textAlign: 'center',
         borderBottomWidth: 1,
+        fontSize: 3
     
         
       },
@@ -51,7 +53,30 @@ export default StyleSheet.create({
 
         marginTop: 20
 
-      }
+      },
+
+      backgroundImage: {
+        flex: 1,
+        width: '100%', 
+        height: '100%', 
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+
+      CaixaLogo: {
+
+        width: '100%',
+
+
+      }, 
+
+      CaixaBotoes: {
+        marginTop: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between', // Adicionando justifyContent: 'space-between'
+       
+      },
+
 
     
 
@@ -61,24 +86,27 @@ export default StyleSheet.create({
 export const LoginEstilo = styled.TextInput`
   height: 35px;
   width: 250px;
-  color: black;
+  color: white;
+  font-size: 10px;
   font-family: 'roboto';
   text-align: center;
 
 `;
 
 
-// estilização do botao login
+// // estilização do botao login
 
-export let BotaoRegistrarEstilo = styled.Button`
-  color: white;
-  padding: 5px 15px;
-  border-radius: 5px;
-  outline: 0;
-  border: 0; 
-  text-transform: uppercase;
-  margin: 10px 0px;
-  cursor: pointer;
+// export const BotaoRegistrarEstilo = styled(TouchableOpacity)`
+//   background-color: black; // Escolha a cor que deseja
+//   padding: 5px 15px;
+//   border-radius: 5px;
+//   margin: 10px 0px;
+// `;
 
-`;
+// export const TextoBotao = styled(Text)`
+//   color: white;
+//   text-transform: uppercase;
+//   text-align: center;
+// `;
+
 

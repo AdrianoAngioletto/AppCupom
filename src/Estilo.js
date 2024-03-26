@@ -5,7 +5,7 @@ export default StyleSheet.create({
 
     texto: {
 
-        fontSize: 18
+        fontSize: 18,
 
     },
 
@@ -13,19 +13,19 @@ export default StyleSheet.create({
 
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     
     
       },
 
       Texto1: {
         color: 'white',
-        fontSize: 18
+        fontSize: 18,
       },
       EstiloImg: {
         width: 200,
         height: 200,
-        marginLeft: 20
+  
      
       },
       inputContainer: {
@@ -35,18 +35,15 @@ export default StyleSheet.create({
         marginTop: 3,
         borderRadius: 2,
         backgroundColor: 'black',
-        textAlign: 'center'
+        textAlign: 'center',
        
 
       },
       input: {
         width: '100%',
-        color: 'black',
+        color: 'white',
         textAlign: 'center',
-        borderBottomWidth: 1,
-        fontSize: 3
-    
-        
+        fontSize: 20, 
       },
 
       caixa_registro: {
@@ -65,9 +62,9 @@ export default StyleSheet.create({
 
       CaixaLogo: {
 
-        width: '100%',
-
-
+        justifyContent: 'center', // Centraliza a logotipo horizontalmente
+        alignItems: 'center',
+    
       }, 
 
       CaixaBotoes: {
@@ -84,8 +81,8 @@ export default StyleSheet.create({
 
 // estilização place holder
 export const LoginEstilo = styled.TextInput`
-  height: 35px;
-  width: 250px;
+  height: 50px;
+  width: 380px;
   color: white;
   font-size: 10px;
   font-family: 'roboto';

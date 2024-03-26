@@ -15,7 +15,7 @@ export default function App() {
       <View style={Estilo.inputContainer}>
         <InputLogin />
       </View>
-      <View>
+      <View style={Estilo.inputContainer}>
         <InputSenha />
       </View>
 

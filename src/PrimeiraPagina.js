@@ -1,6 +1,6 @@
 // Primeiro.js
 import React from "react";
-import { Image,  Text, View, TextInput, Button, } from "react-native";
+import { Image,  Text, View, TextInput, Button, Alert, } from "react-native";
 import Estilo, { LoginEstilo } from "./Estilo";
 
 
@@ -18,6 +18,12 @@ function Imagem() {
 
 }
 
+let BotaoLoginATV = () => {
+
+  Alert.alert('Vamos fazer o Login')
+
+}
+
 function InputLogin() {
   return (
     <View style={Estilo.inputContainer}>
@@ -29,6 +35,14 @@ function InputLogin() {
   );
 }
 
+let BotaoRegistroATV = () => {
+
+  Alert.alert('Vamos Registrar');
+
+  
+};
+
+
 function InputSenha() {
   return (
     <View style={Estilo.inputContainer}>
@@ -38,6 +52,8 @@ function InputSenha() {
         placeholderTextColor="white"
         style={{ color: 'white' }} // Defina a cor do texto como branco
         secureTextEntry // Adicione a propriedade secureTextEntry
+      
+        
 
       />
     </View>
@@ -52,7 +68,7 @@ function BotaoRegistrar(){
       <Button 
        title="Registrar"
        color="black"
-      
+       onPress={BotaoRegistroATV}
       />
 
 
@@ -70,6 +86,7 @@ function BotaoEntrar(){
     <Button 
     title="Entrar"
     color="black"
+    onPress={BotaoLoginATV}
 
       
       
